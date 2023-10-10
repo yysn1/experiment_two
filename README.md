@@ -20,20 +20,25 @@ Student和Teacher类中存在相同属性和行为，将这些内容抽取到单
 核心代码：
 Person类：
 package pack;
+
 public class Person {
     int number;
     String name;
     String sex;
+
     public Person(int number, String name, String sex) {
         this.number = number;
         this.name = name;
         this.sex = sex;
+
     }
 }
 
 Student类
 Student继承Person类
 package pack;
+
+
 public class Student extends Person{
     int c;
     public Student(int number, String name,String sex) {
@@ -53,14 +58,17 @@ public class Student extends Person{
     void delete() {
         if(c== 1);{
             System.out.println("学生选课信息为：");}
+
     }
 }
 
 Teacher类
 Teacher继承Person类
 package pack;
+
 public class Teacher extends Person {
     String lesson;
+
     public Teacher(int number, String name, String sex, String lesson) {
         super(number, name, sex);
         this.number = number;
@@ -68,9 +76,11 @@ public class Teacher extends Person {
         this.sex = sex;
         this.lesson = lesson;
     }
+
     public String toString() {
         return "Teacher(教师信息):" + "  编号：" + number + "    姓名：" + name + "   性别：" + sex + "     所授课程：" + lesson;
     }
+
 }
 
 Person类作为父类，Student类和Teacher类作为子类，继承父类中所有的属性和方法。
